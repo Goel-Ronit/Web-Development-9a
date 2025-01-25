@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ImagePlusIcon, Trash } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";

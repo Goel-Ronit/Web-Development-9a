@@ -85,6 +85,7 @@ const ProductForm = ({
             router.push(`/${params.storeId}/products`)
             toast.success(toastMessage);
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);
@@ -100,6 +101,7 @@ const ProductForm = ({
             router.push(`/${params.storeId}/products`);
             toast.success("Product Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);

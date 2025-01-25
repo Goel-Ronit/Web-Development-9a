@@ -63,6 +63,7 @@ const ColorForm = ({
             router.push(`/${params.storeId}/colors`)
             toast.success(toastMessage);
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);
@@ -78,6 +79,7 @@ const ColorForm = ({
             router.push(`/${params.storeId}/colors`);
             toast.success("Color Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all products using this color first.");
         } finally {
             setLoading(false);

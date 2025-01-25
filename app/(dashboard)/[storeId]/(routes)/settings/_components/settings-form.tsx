@@ -50,6 +50,7 @@ const SettingsForm = ({
             router.refresh();
             toast.success("Store Updated");
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);
@@ -65,6 +66,7 @@ const SettingsForm = ({
             router.push("/");
             toast.success("Store Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all products and categories first.");
         } finally {
             setLoading(false);

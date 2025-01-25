@@ -47,6 +47,7 @@ export async function POST(
         });
         return NextResponse.json(size);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500});
     }
 };
@@ -68,6 +69,7 @@ export async function GET(
         });
         return NextResponse.json(sizes);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500});
     }
 };

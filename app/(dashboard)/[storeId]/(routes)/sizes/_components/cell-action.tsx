@@ -33,6 +33,7 @@ const CellAction = ({
             router.refresh();
             toast.success("Size Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all products using this size first.");
         } finally {
             setLoading(false);

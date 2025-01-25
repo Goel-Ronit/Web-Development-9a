@@ -65,6 +65,7 @@ const CategoryForm = ({
             router.push(`/${params.storeId}/categories`)
             toast.success(toastMessage);
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);
@@ -80,6 +81,7 @@ const CategoryForm = ({
             router.push(`/${params.storeId}/categories`);
             toast.success("Category Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all products using this category first.");
         } finally {
             setLoading(false);

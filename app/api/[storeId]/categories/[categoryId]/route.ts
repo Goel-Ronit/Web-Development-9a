@@ -25,6 +25,7 @@ export async function GET(
 
         return NextResponse.json(category);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500})
     }
 };
@@ -78,6 +79,7 @@ export async function PATCH(
 
         return NextResponse.json(category);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500})
     }
 };
@@ -117,6 +119,7 @@ export async function DELETE(
 
         return NextResponse.json(category);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500})
     }
 };

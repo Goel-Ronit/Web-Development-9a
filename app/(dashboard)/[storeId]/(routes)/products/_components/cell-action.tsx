@@ -33,6 +33,7 @@ const CellAction = ({
             router.refresh();
             toast.success("Product Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Something Went Wrong");
         } finally {
             setLoading(false);

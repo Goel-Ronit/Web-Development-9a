@@ -1,5 +1,5 @@
 "use client";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {Bar, BarChart, ResponsiveContainer, XAxis, YAxis} from "recharts";
 
 interface OverviewProps  {

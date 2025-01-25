@@ -26,6 +26,7 @@ export async function POST(
         });
         return NextResponse.json(store);
     } catch (error) {
+        console.log(error);
         return new NextResponse("Internal Error", {status: 500});
     }
 };

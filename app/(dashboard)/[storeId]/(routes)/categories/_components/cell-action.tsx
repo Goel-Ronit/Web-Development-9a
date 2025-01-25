@@ -33,6 +33,7 @@ const CellAction = ({
             router.refresh();
             toast.success("Category Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all products using this category first.");
         } finally {
             setLoading(false);

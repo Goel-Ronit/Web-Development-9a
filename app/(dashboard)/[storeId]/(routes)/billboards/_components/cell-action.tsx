@@ -33,6 +33,7 @@ const CellAction = ({
             router.refresh();
             toast.success("Billboard Deleted");
         } catch (error) {
+            console.log(error);
             toast.error("Make sure you removed all categories using the billboard first.");
         } finally {
             setLoading(false);
