@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useOrigin } from "@/hooks/use-origin";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Store } from "@prisma/client";
+import type { StoreModel } from "@/generated/prisma/models/Store";
 import axios from "axios";
 import { Trash } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
@@ -19,7 +19,7 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 
 interface SettingsFormsProps {
-    initialData: Store;
+    initialData: StoreModel;
 }
 
 const formSchema = z.object({

@@ -1,6 +1,6 @@
 "use client";
 
-import { Store } from "@prisma/client";
+import type { StoreModel } from "@/generated/prisma/models/Store";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useStoreModal } from "@/hooks/use-store-modal";
 import { useParams, useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ import { Separator } from "./ui/separator";
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 
 interface StoreSwitcherProps extends PopoverTriggerProps {
-    items: Store[];
+    items: StoreModel[];
 };
 const StoreSwitcher = ({
     className,

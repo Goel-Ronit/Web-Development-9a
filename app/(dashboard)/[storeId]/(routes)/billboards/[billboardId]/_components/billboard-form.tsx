@@ -8,7 +8,7 @@ import ImageUpload from "@/components/ui/image-upload";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Billboard } from "@prisma/client";
+import type { BillboardModel } from "@/generated/prisma/models/Billboard";
 import axios from "axios";
 import { Trash } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 
 interface BillboardFormsProps {
-    initialData: Billboard | null;
+    initialData: BillboardModel | null;
 }
 
 const formSchema = z.object({

@@ -7,7 +7,7 @@ import Heading from "@/components/ui/heading";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Size } from "@prisma/client";
+import type { SizeModel } from "@/generated/prisma/models/Size";
 import axios from "axios";
 import { Trash } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
@@ -17,7 +17,7 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 
 interface SizeFormsProps {
-    initialData: Size | null;
+    initialData: SizeModel | null;
 }
 
 const formSchema = z.object({

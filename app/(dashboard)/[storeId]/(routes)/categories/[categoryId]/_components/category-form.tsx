@@ -8,7 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Billboard, Category } from "@prisma/client";
+import type { BillboardModel } from "@/generated/prisma/models/Billboard";
+import type { CategoryModel } from "@/generated/prisma/models/Category";
 import axios from "axios";
 import { Trash } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
@@ -18,8 +19,8 @@ import toast from "react-hot-toast";
 import * as z from "zod";
 
 interface CategoryFormsProps {
-    initialData: Category | null;
-    billboards: Billboard[];
+    initialData: CategoryModel | null;
+    billboards: BillboardModel[];
 }
 
 const formSchema = z.object({
